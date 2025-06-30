@@ -26,3 +26,6 @@ mandelbrot*.png
 *.avi
 *.iobj
 *.jpg
+*.dll
+*.a
+*.pth
