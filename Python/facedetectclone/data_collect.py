@@ -16,6 +16,7 @@ def square_and_preprocess_face(face_img, target_size=64):
     Returns:
         np.ndarray: Preprocessed image of shape (target_size, target_size, C) with float32 values 0-1.
     """
+    
     h, w = face_img.shape[:2]
 
     # Determine padding amounts
