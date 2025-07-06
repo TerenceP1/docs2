@@ -3,6 +3,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
+import os
 
 class BinaryCNN(nn.Module):
     def __init__(self):
@@ -67,6 +68,14 @@ def square_and_preprocess_face(face_img, target_size=64):
     normalized_img = (resized_img.astype(np.float32) / 255.0 -0.5)*2.0
 
     return normalized_img
+def get_next_available_filename(folder=".", prefix="hehe_", ext=".jpg"):
+    i = 1
+    while True:
+        filename = f"{prefix}{i}{ext}"
+        filepath = os.path.join(folder, filename)
+        if not os.path.exists(filepath):
+            return filepath
+        i += 1
 while True:
     print("Detecting")
     _,img=cap.read()
@@ -82,4 +91,6 @@ while True:
         if torch.sigmoid(outputs).item()>0.4:
         #if True:
             cv2.imshow("Face",cv2.resize(np.clip(((norm+1)/2*255),0,255).astype(np.uint8),(512,512)))
-            cv2.waitKey(1)
+        cv2.waitKey(1)
+        cv2.imwrite(get_next_available_filename(folder='detect'),np.clip(((norm+1)/2*255),0,255).astype(np.uint8))
+    cv2.waitKey(1)
