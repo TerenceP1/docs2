@@ -6,6 +6,7 @@
 #include <vector>
 #include <opencv2/opencv.hpp>
 #include <filesystem>
+#include <Windows.h>
 #pragma comment(lib, "C:\\Users\\teren\\Docs and Files\\Github_Repos\\others\\opencv\\build\\x64\\vc16\\lib\\opencv_world4110.lib")
 using namespace std;
 using namespace cv;
@@ -84,6 +85,18 @@ Mat genImg(double x, double y, int max_itr, double zoom) {
     return res;
 }
 
+Mat latestImage= Mat::zeros(Size(width, height), CV_8UC3);
+mutex imageMutex;
+
+void passive() {
+    while (true) {
+        Sleep(1000);
+		lock_guard<mutex> lock(imageMutex);
+        imshow("Preview", latestImage);
+        waitKey(10);
+    }
+}
+
 int main()
 {
     // Create a blank black image (3-channel BGR)
@@ -119,14 +132,19 @@ int main()
         filesystem::create_directory(path);
     }
     VideoWriter writer(path2, VideoWriter::fourcc('M', 'J', 'P', 'G'), 60, Size(width, height));
+	thread passiveThread(passive); // Start a thread to keep the OpenCV window responsive
     for (double czoom = 1.0; czoom >= zoom; czoom /= 1.0116194403) {
         cout << ind << endl;
         Mat img = genImg(x, y, maxitr, czoom);
         string filename = "frames/mandelbrot_" + to_string(ind++) + ".png";
         Mat resized;
         //double scale = 0.5; // or whatever fits your screen nicely
-        resize(img, resized, Size(), scale, scale, INTER_LINEAR);
-        imshow("Preview", resized);
+        resize(img, resized, Size(), scale, scale, cv::INTER_NEAREST);
+        {
+
+            lock_guard<mutex> lock(imageMutex);
+            latestImage = resized;
+        }
         imwrite(filename, img);
         waitKey(1);
         writer.write(img); // Write the frame to the video file

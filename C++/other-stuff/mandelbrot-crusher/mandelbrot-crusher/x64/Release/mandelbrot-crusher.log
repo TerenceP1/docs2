@@ -1,6 +1,8 @@
-﻿  Generating code
-  1 of 454 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+﻿  mandelbrot-crusher.cpp
+C:\Users\teren\Docs and Files\Github_Repos\C++\other-stuff\mandelbrot-crusher\mandelbrot-crusher\mandelbrot-crusher.cpp(26,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Generating code
+  1 of 487 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   mandelbrot-crusher.vcxproj -> C:\Users\teren\Docs and Files\Github_Repos\C++\other-stuff\mandelbrot-crusher\x64\Release\mandelbrot-crusher.exe

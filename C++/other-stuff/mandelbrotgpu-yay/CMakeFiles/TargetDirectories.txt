@@ -1,0 +1,3 @@
+C:/Users/teren/Docs and Files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/mandelbrotgpu.dir
+C:/Users/teren/Docs and Files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/ALL_BUILD.dir
+C:/Users/teren/Docs and Files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/ZERO_CHECK.dir
