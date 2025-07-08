@@ -1,7 +1,17 @@
 #include <CL/cl.h>
+#include <opencv2/opencv.hpp>
 #include <iostream>
 #include <vector>
 #include <string>
+#include <filesystem>
+#include <Windows.h>
+#include <thread>
+using namespace cv;
+
+#define width 3840  // 4K width
+#define height 2160 // 4K height
+
+int speclen;
 
 // Global OpenCL variables
 cl_platform_id platform = nullptr;
@@ -80,27 +90,27 @@ void init_cl()
 
     // 5. Create and build program
     const char *kernelSource = R"(
-inline void hueToRGB(float hue, int* r, int* g, int* b) {
+void hueToRGB(float hue, __private int* r, __private int* g, __private int* b) {
     float s = 1.0f;
     float v = 1.0f;
 
     float c = v * s;
-    float x = c * (1 - fabsf(fmodf(hue / 60.0f, 2.0f) - 1));
+    float x = c * (1.0f - fabs(fmod(hue / 60.0f, 2.0f) - 1.0f));
     float m = v - c;
 
-    float rf = 0, gf = 0, bf = 0;
-    if (hue < 60) {
-        rf = c; gf = x; bf = 0;
-    } else if (hue < 120) {
-        rf = x; gf = c; bf = 0;
-    } else if (hue < 180) {
-        rf = 0; gf = c; bf = x;
-    } else if (hue < 240) {
-        rf = 0; gf = x; bf = c;
-    } else if (hue < 300) {
-        rf = x; gf = 0; bf = c;
+    float rf = 0.0f, gf = 0.0f, bf = 0.0f;
+    if (hue < 60.0f) {
+        rf = c; gf = x; bf = 0.0f;
+    } else if (hue < 120.0f) {
+        rf = x; gf = c; bf = 0.0f;
+    } else if (hue < 180.0f) {
+        rf = 0.0f; gf = c; bf = x;
+    } else if (hue < 240.0f) {
+        rf = 0.0f; gf = x; bf = c;
+    } else if (hue < 300.0f) {
+        rf = x; gf = 0.0f; bf = c;
     } else {
-        rf = c; gf = 0; bf = x;
+        rf = c; gf = 0.0f; bf = x;
     }
 
     *r = (int)((rf + m) * 255.0f);
@@ -132,14 +142,15 @@ __kernel void mandelbrot_thread(int max_itr,double re, double im, unsigned char 
     }
     int r=0,g=0,b=0;
     if (i!=max_itr){
-        hueToRGB((double)(i%100)/100.0*360.0,&r,&g,&b);
+        hueToRGB((double)(i%speclen)/((double)speclen)*360.0,&r,&g,&b);
     }
-    img[x*3+y*width*3]=r;
+    img[x*3+y*width*3]=b;
     img[x*3+y*width*3+1]=g;
-    img[x*3+y*width*3+2]=b;
+    img[x*3+y*width*3+2]=r;
 }
     )";
-
+    std::string stub = std::string("#define speclen ") + std::to_string(speclen) + "\n" + std::string(kernelSource);
+    kernelSource = stub.c_str();
     program = clCreateProgramWithSource(context, 1, &kernelSource, nullptr, &err);
     checkError(err, "clCreateProgramWithSource");
 
@@ -157,7 +168,7 @@ __kernel void mandelbrot_thread(int max_itr,double re, double im, unsigned char 
     }
 
     // 6. Create kernel
-    kernel = clCreateKernel(program, "dummy_kernel", &err);
+    kernel = clCreateKernel(program, "mandelbrot_thread", &err);
     checkError(err, "clCreateKernel");
 
     // Print device name
@@ -169,9 +180,115 @@ __kernel void mandelbrot_thread(int max_itr,double re, double im, unsigned char 
     checkError(err, "clCreateBuffer");
 }
 
+int max_itr;
+
+Mat genImg(double x, double y, int max_itr, double zoom)
+{
+
+    // Init kernel
+
+    clSetKernelArg(kernel, 0, sizeof(int), &max_itr);
+    clSetKernelArg(kernel, 1, sizeof(double), &x);
+    clSetKernelArg(kernel, 2, sizeof(double), &y);
+    clSetKernelArg(kernel, 3, sizeof(cl_mem), &img);
+    clSetKernelArg(kernel, 4, sizeof(double), &zoom);
+
+    // Launch kernel
+
+    size_t global_offset[2] = {0, 0};
+    size_t global_size[2] = {width, height};
+
+    clEnqueueNDRangeKernel(queue, kernel, 2, global_offset, global_size, NULL, 0, NULL, NULL);
+
+    // Wait for kernel to complete
+
+    clFlush(queue);
+    clFinish(queue);
+
+    // Copy data back to the cv::Mat
+
+    unsigned char *resBuf = new unsigned char[width * height * 3];
+    clEnqueueReadBuffer(queue, img, true, 0, width * height * 3, resBuf, 0, NULL, NULL);
+    Mat res2(height, width, CV_8UC3, resBuf);
+    Mat res = res2.clone();
+    delete[] resBuf;
+
+    return res;
+}
+
+Mat latestImage = Mat::zeros(Size(width, height), CV_8UC3);
+std::mutex imageMutex;
+
+void passive()
+{
+    while (true)
+    {
+        Sleep(1000);
+        std::lock_guard<std::mutex> lock(imageMutex);
+        imshow("Preview", latestImage);
+        waitKey(10);
+    }
+}
+
 int main()
 {
     init_cl();
+
+    // Create a blank black image (3-channel BGR)
+    /*Mat res = genImg(0.0, 0.0, 1000, 1.5);
+    imwrite("mandelbrot.png", res);
+    imshow("Mandelbrot Set", res);
+    waitKey(0);
+    destroyAllWindows(); // Close all OpenCV windows*/
+    double x, y, zoom;
+    std::cout << "x: ";
+    std::cin >> x;
+    std::cout << "y: ";
+    std::cin >> y;
+    std::cout << "zoom: ";
+    std::cin >> zoom;
+    std::cout << "MaxItr (default 1000): ";
+    int maxitr;
+    std::cin >> maxitr;
+    std::cout << "Spectrum length (default 100): ";
+    std::cin >> speclen;
+    double scale;
+    std::cout << "Scale for display (reletive to 4k) (default 1): ";
+    std::cin >> scale;
+    zoom = 1.0 / zoom;
+    int ind = 0;
+    std::string path = "frames";
+    std::cout << "File output name: ";
+    std::string path2;
+    std::cin >> path2;
+    std::cout << "The generation is very GPU intensive so your computer may freeze. Intermediate frames before video finishes will be in the frames folder. A popup will appear with the current frame. Please fullscreen it or else it will make your tasknar disappear (IDK why). Are you sure?" << std::endl;
+    system("pause > nul | <nul set /p \"=Are you 100% sure about this? Press any key to continue and close this window to cancel...\"");
+    if (!std::filesystem::exists(path))
+    {
+        std::filesystem::create_directory(path);
+    }
+    VideoWriter writer(path2, VideoWriter::fourcc('M', 'J', 'P', 'G'), 60, Size(width, height));
+    std::thread passiveThread(passive); // Start a thread to keep the OpenCV window responsive
+    passiveThread.detach();
+    for (double czoom = 1.0; czoom >= zoom; czoom /= 1.0116194403)
+    {
+        std::cout << ind << std::endl;
+        Mat img = genImg(x, y, maxitr, czoom);
+        std::string filename = "frames/mandelbrot_" + std::to_string(ind++) + ".png";
+        Mat resized;
+        // double scale = 0.5; // or whatever fits your screen nicely
+        resize(img, resized, Size(), scale, scale, cv::INTER_NEAREST);
+        {
+
+            std::lock_guard<std::mutex> lock(imageMutex);
+            latestImage = resized;
+        }
+        imwrite(filename, img);
+        waitKey(1);
+        writer.write(img); // Write the frame to the video file
+    }
+    writer.release();
+    system("start cmd /k echo DONE GENERATING MANDELBROT SET");
 
     // Cleanup OpenCL resources
     if (kernel)
@@ -184,6 +301,8 @@ int main()
         clReleaseContext(context);
     if (device)
         clReleaseDevice(device);
+    if (img)
+        clReleaseMemObject(img);
 
     return 0;
 }

@@ -5,8 +5,16 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(OpenCL REQUIRED)
+find_package(OpenCV REQUIRED)
+
 
 add_executable(mandelbrotgpu mandelbrotgpu.cpp)
 
 target_include_directories(mandelbrotgpu PRIVATE ${OpenCL_INCLUDE_DIRS})
 target_link_libraries(mandelbrotgpu PRIVATE ${OpenCL_LIBRARIES})
+
+# Include OpenCV headers
+target_include_directories(mandelbrotgpu PRIVATE ${OpenCV_INCLUDE_DIRS})
+
+# Link OpenCV libraries
+target_link_libraries(mandelbrotgpu PRIVATE ${OpenCV_LIBS})
