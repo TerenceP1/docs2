@@ -3,7 +3,7 @@ set(CMAKE_HOST_SYSTEM_NAME "Windows")
 set(CMAKE_HOST_SYSTEM_VERSION "10.0.26100")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "AMD64")
 
-include("C:/Users/teren/docs_and_files/Github_Repos/others/vcpkg/scripts/buildsystems/vcpkg.cmake")
+include("C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 set(CMAKE_SYSTEM "Windows-10.0.26100")
 set(CMAKE_SYSTEM_NAME "Windows")

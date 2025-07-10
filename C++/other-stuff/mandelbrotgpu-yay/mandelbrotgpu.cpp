@@ -8,6 +8,13 @@
 #include <thread>
 using namespace cv;
 
+#ifndef CL_QUEUE_PRIORITY_KHR
+#define CL_QUEUE_PRIORITY_KHR 0x1096
+#endif
+#ifndef CL_QUEUE_PRIORITY_HIGH_KHR
+#define CL_QUEUE_PRIORITY_HIGH_KHR 0x1097
+#endif
+
 #define width 3840  // 4K width
 #define height 2160 // 4K height
 
@@ -29,6 +36,20 @@ void checkError(cl_int err, const char *name)
         std::cerr << "Error: " << name << " (" << err << ")" << std::endl;
         exit(EXIT_FAILURE);
     }
+}
+
+bool checkPriorityHintsSupport(cl_device_id device)
+{
+    size_t ext_size = 0;
+    clGetDeviceInfo(device, CL_DEVICE_EXTENSIONS, 0, nullptr, &ext_size);
+    std::vector<char> ext_data(ext_size);
+    clGetDeviceInfo(device, CL_DEVICE_EXTENSIONS, ext_size, ext_data.data(), nullptr);
+    std::string extensions(ext_data.begin(), ext_data.end());
+
+    std::cout << "Device extensions:\n"
+              << extensions << "\n";
+
+    return extensions.find("cl_khr_priority_hints") != std::string::npos;
 }
 
 void init_cl()
@@ -75,22 +96,26 @@ void init_cl()
         checkError(err, "clGetDeviceIDs GPU list");
         device = devices[0];
     }
-
+    checkPriorityHintsSupport(device);
     // 3. Create context
     context = clCreateContext(nullptr, 1, &device, nullptr, nullptr, &err);
     checkError(err, "clCreateContext");
 
     // 4. Create command queue
 #if CL_TARGET_OPENCL_VERSION >= 200
-    queue = clCreateCommandQueueWithProperties(context, device, 0, &err);
+    cl_queue_properties props_priority[] = {
+        CL_QUEUE_PROPERTIES, CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE,
+        0};
+    queue = clCreateCommandQueueWithProperties(context, device, props_priority, &err);
+    checkError(err, "clCreateCommandQueueWithProperties");
 #else
     queue = clCreateCommandQueue(context, device, 0, &err);
-#endif
     checkError(err, "clCreateCommandQueue");
+#endif
 
     // 5. Create and build program
     const char *kernelSource = R"(
-void hueToRGB(float hue, __private int* r, __private int* g, __private int* b) {
+void hueToRGB(float hue, int* r, int* g, int* b) {
     float s = 1.0f;
     float v = 1.0f;
 
@@ -119,9 +144,13 @@ void hueToRGB(float hue, __private int* r, __private int* g, __private int* b) {
 }
 #define width 3840 // 4K width
 #define height 2160 // 4K height
-__kernel void mandelbrot_thread(int max_itr,double re, double im, unsigned char *img, double zoom){
+__kernel void mandelbrot_thread(int max_itr,double re, double im, __global unsigned char *img, double zoom,int speclen){
     int x = get_global_id(0); // x-coordinate (width)
     int y = get_global_id(1); // y-coordinate (height)
+    if (x>=width){
+        return;
+    }
+    if (y>=height) return;
     double aspect=(double)width / height;
     double x0 = re + ((double)x / (double)width * 2.0 - 1.0) * zoom * aspect;
     double y0 = im + ((double)y / (double)height * 2.0 - 1.0) * zoom;
@@ -149,8 +178,8 @@ __kernel void mandelbrot_thread(int max_itr,double re, double im, unsigned char 
     img[x*3+y*width*3+2]=r;
 }
     )";
-    std::string stub = std::string("#define speclen ") + std::to_string(speclen) + "\n" + std::string(kernelSource);
-    kernelSource = stub.c_str();
+    /*     std::string stub = std::string("#define speclen ") + std::to_string(speclen) + "\n" + std::string(kernelSource);
+        kernelSource = stub.c_str(); */
     program = clCreateProgramWithSource(context, 1, &kernelSource, nullptr, &err);
     checkError(err, "clCreateProgramWithSource");
 
@@ -192,13 +221,16 @@ Mat genImg(double x, double y, int max_itr, double zoom)
     clSetKernelArg(kernel, 2, sizeof(double), &y);
     clSetKernelArg(kernel, 3, sizeof(cl_mem), &img);
     clSetKernelArg(kernel, 4, sizeof(double), &zoom);
+    clSetKernelArg(kernel, 5, sizeof(int), &speclen);
 
     // Launch kernel
 
     size_t global_offset[2] = {0, 0};
     size_t global_size[2] = {width, height};
-
-    clEnqueueNDRangeKernel(queue, kernel, 2, global_offset, global_size, NULL, 0, NULL, NULL);
+    size_t maxWorkGroupSize;
+    clGetDeviceInfo(device, CL_DEVICE_MAX_WORK_GROUP_SIZE, sizeof(size_t), &maxWorkGroupSize, NULL);
+    size_t localWorkSize[2] = {maxWorkGroupSize, 1};
+    clEnqueueNDRangeKernel(queue, kernel, 2, global_offset, global_size, localWorkSize, 0, NULL, NULL);
 
     // Wait for kernel to complete
 
@@ -221,6 +253,8 @@ std::mutex imageMutex;
 
 void passive()
 {
+    cv::namedWindow("Preview", cv::WINDOW_NORMAL); // Allow window resizing
+    cv::setWindowProperty("Preview", cv::WND_PROP_FULLSCREEN, cv::WINDOW_FULLSCREEN);
     while (true)
     {
         Sleep(1000);
@@ -267,7 +301,7 @@ int main()
     {
         std::filesystem::create_directory(path);
     }
-    VideoWriter writer(path2, VideoWriter::fourcc('M', 'J', 'P', 'G'), 60, Size(width, height));
+    VideoWriter writer(path2, VideoWriter::fourcc('a', 'v', 'c', '1'), 60, Size(width, height));
     std::thread passiveThread(passive); // Start a thread to keep the OpenCV window responsive
     passiveThread.detach();
     for (double czoom = 1.0; czoom >= zoom; czoom /= 1.0116194403)

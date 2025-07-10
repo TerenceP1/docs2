@@ -2271,3 +2271,726 @@ events:
         
       exitCode: 1
 ...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.14.8+a7a4d5af0 for .NET Framework
+      Build started 7/9/2025 8:00:06 AM.
+      
+      Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\4.0.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\4.0.3\\CompilerIdCXX\\CompilerIdCXX.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\4.0.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\4.0.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:02.32
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/4.0.3/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-owimff"
+      binary: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-owimff"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/Users/teren/docs_and_files/Github_Repos/others/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/teren/docs_and_files/Github_Repos/others/vcpkg"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-owimff'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c1bc4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.8+a7a4d5af0 for .NET Framework
+        Build started 7/9/2025 8:00:09 AM.
+        
+        Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-owimff\\cmTC_c1bc4.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c1bc4.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-owimff\\Debug\\".
+          Creating directory "cmTC_c1bc4.dir\\Debug\\cmTC_c1bc4.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c1bc4.dir\\Debug\\cmTC_c1bc4.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_c1bc4.dir\\Debug\\cmTC_c1bc4.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c1bc4.dir\\Debug\\\\" /Fd"cmTC_c1bc4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\others\\cmake\\cmake-4.0.3-windows-x86_64\\cmake-4.0.3-windows-x86_64\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35207.1 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c1bc4.dir\\Debug\\\\" /Fd"cmTC_c1bc4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\others\\cmake\\cmake-4.0.3-windows-x86_64\\cmake-4.0.3-windows-x86_64\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-owimff\\Debug\\cmTC_c1bc4.exe" /INCREMENTAL /ILK:"cmTC_c1bc4.dir\\Debug\\cmTC_c1bc4.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-owimff/Debug/cmTC_c1bc4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-owimff/Debug/cmTC_c1bc4.lib" /MACHINE:X64  /machine:x64 cmTC_c1bc4.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_c1bc4.vcxproj -> C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-owimff\\Debug\\cmTC_c1bc4.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_c1bc4.dir\\Debug\\cmTC_c1bc4.tlog\\unsuccessfulbuild".
+          Touching "cmTC_c1bc4.dir\\Debug\\cmTC_c1bc4.tlog\\cmTC_c1bc4.lastbuildstate".
+        Done Building Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-owimff\\cmTC_c1bc4.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.66
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:270 (cmake_determine_linker_id)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35207.1
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CheckSymbolExists.cmake:160 (try_compile)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CheckSymbolExists.cmake:69 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/FindOpenCL.cmake:59 (check_symbol_exists)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/FindOpenCL.cmake:100 (_FIND_OPENCL_VERSION)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/vcpkg/installed/x64-windows/share/opencl/vcpkg-cmake-wrapper.cmake:2 (_find_package)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/vcpkg/scripts/buildsystems/vcpkg.cmake:850 (include)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for CL_VERSION_3_0"
+    directories:
+      source: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-4f0hp0"
+      binary: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-4f0hp0"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/Users/teren/docs_and_files/Github_Repos/others/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/teren/docs_and_files/Github_Repos/others/vcpkg"
+    buildResult:
+      variable: "OPENCL_VERSION_3_0"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-4f0hp0'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_4279f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.8+a7a4d5af0 for .NET Framework
+        Build started 7/9/2025 8:00:10 AM.
+        
+        Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4f0hp0\\cmTC_4279f.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_4279f.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4f0hp0\\Debug\\".
+          Creating directory "cmTC_4279f.dir\\Debug\\cmTC_4279f.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_4279f.dir\\Debug\\cmTC_4279f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_4279f.dir\\Debug\\cmTC_4279f.tlog\\unsuccessfulbuild".
+        SetModuleDependencies:
+          Creating directory "cmTC_4279f.dir\\Debug\\cmTC_4279f_MD.tlog\\".
+          Scanning sources for module dependencies...
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\teren\\docs_and_files\\Github_Repos\\others\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_4279f.dir\\Debug\\\\" /scanDependencies "cmTC_4279f.dir\\Debug\\\\" /Fo"cmTC_4279f.dir\\Debug\\\\" /Fd"cmTC_4279f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4f0hp0\\CheckSymbolExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35207.1 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\Users\\teren\\docs_and_files\\Github_Repos\\others\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_4279f.dir\\Debug\\\\" /scanDependencies "cmTC_4279f.dir\\Debug\\\\" /Fo"cmTC_4279f.dir\\Debug\\\\" /Fd"cmTC_4279f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4f0hp0\\CheckSymbolExists.cxx"
+          CheckSymbolExists.cxx
+        ClCompile:
+          Compiling...
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\teren\\docs_and_files\\Github_Repos\\others\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_4279f.dir\\Debug\\\\" /Fo"cmTC_4279f.dir\\Debug\\\\" /Fd"cmTC_4279f.dir\\Debug\\vc143.pdb" /sourceDependencies "cmTC_4279f.dir\\Debug\\.d.json" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4f0hp0\\CheckSymbolExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35207.1 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\Users\\teren\\docs_and_files\\Github_Repos\\others\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_4279f.dir\\Debug\\\\" /Fo"cmTC_4279f.dir\\Debug\\\\" /Fd"cmTC_4279f.dir\\Debug\\vc143.pdb" /sourceDependencies "cmTC_4279f.dir\\Debug\\.d.json" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4f0hp0\\CheckSymbolExists.cxx"
+          CheckSymbolExists.cxx
+          cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4f0hp0\\Debug\\cmTC_4279f.exe" /INCREMENTAL /ILK:"cmTC_4279f.dir\\Debug\\cmTC_4279f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-4f0hp0/Debug/cmTC_4279f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-4f0hp0/Debug/cmTC_4279f.lib" /MACHINE:X64  /machine:x64 cmTC_4279f.dir\\Debug\\CheckSymbolExists.obj
+          cmTC_4279f.vcxproj -> C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4f0hp0\\Debug\\cmTC_4279f.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_4279f.dir\\Debug\\cmTC_4279f.tlog\\unsuccessfulbuild".
+          Touching "cmTC_4279f.dir\\Debug\\cmTC_4279f.tlog\\cmTC_4279f.lastbuildstate".
+        Done Building Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4f0hp0\\cmTC_4279f.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.07
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.14.8+a7a4d5af0 for .NET Framework
+      Build started 7/9/2025 8:07:35 AM.
+      
+      Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\4.0.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\4.0.3\\CompilerIdCXX\\CompilerIdCXX.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\4.0.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\4.0.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.37
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/4.0.3/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-nqmg8v"
+      binary: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-nqmg8v"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/Users/teren/AppData/my_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/teren/AppData/my_stuff/vcpkg"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-nqmg8v'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_88178.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.8+a7a4d5af0 for .NET Framework
+        Build started 7/9/2025 8:07:37 AM.
+        
+        Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-nqmg8v\\cmTC_88178.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_88178.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-nqmg8v\\Debug\\".
+          Creating directory "cmTC_88178.dir\\Debug\\cmTC_88178.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_88178.dir\\Debug\\cmTC_88178.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_88178.dir\\Debug\\cmTC_88178.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_88178.dir\\Debug\\\\" /Fd"cmTC_88178.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\others\\cmake\\cmake-4.0.3-windows-x86_64\\cmake-4.0.3-windows-x86_64\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35207.1 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_88178.dir\\Debug\\\\" /Fd"cmTC_88178.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\others\\cmake\\cmake-4.0.3-windows-x86_64\\cmake-4.0.3-windows-x86_64\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-nqmg8v\\Debug\\cmTC_88178.exe" /INCREMENTAL /ILK:"cmTC_88178.dir\\Debug\\cmTC_88178.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-nqmg8v/Debug/cmTC_88178.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-nqmg8v/Debug/cmTC_88178.lib" /MACHINE:X64  /machine:x64 cmTC_88178.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_88178.vcxproj -> C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-nqmg8v\\Debug\\cmTC_88178.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_88178.dir\\Debug\\cmTC_88178.tlog\\unsuccessfulbuild".
+          Touching "cmTC_88178.dir\\Debug\\cmTC_88178.tlog\\cmTC_88178.lastbuildstate".
+        Done Building Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-nqmg8v\\cmTC_88178.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.62
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:270 (cmake_determine_linker_id)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35207.1
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CheckSymbolExists.cmake:160 (try_compile)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CheckSymbolExists.cmake:69 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/FindOpenCL.cmake:59 (check_symbol_exists)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/FindOpenCL.cmake:100 (_FIND_OPENCL_VERSION)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/opencl/vcpkg-cmake-wrapper.cmake:2 (_find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:850 (include)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for CL_VERSION_3_0"
+    directories:
+      source: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-d6iwle"
+      binary: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-d6iwle"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/Users/teren/AppData/my_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/teren/AppData/my_stuff/vcpkg"
+    buildResult:
+      variable: "OPENCL_VERSION_3_0"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-d6iwle'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_643bb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.8+a7a4d5af0 for .NET Framework
+        Build started 7/9/2025 8:07:38 AM.
+        
+        Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-d6iwle\\cmTC_643bb.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_643bb.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-d6iwle\\Debug\\".
+          Creating directory "cmTC_643bb.dir\\Debug\\cmTC_643bb.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_643bb.dir\\Debug\\cmTC_643bb.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_643bb.dir\\Debug\\cmTC_643bb.tlog\\unsuccessfulbuild".
+        SetModuleDependencies:
+          Creating directory "cmTC_643bb.dir\\Debug\\cmTC_643bb_MD.tlog\\".
+          Scanning sources for module dependencies...
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_643bb.dir\\Debug\\\\" /scanDependencies "cmTC_643bb.dir\\Debug\\\\" /Fo"cmTC_643bb.dir\\Debug\\\\" /Fd"cmTC_643bb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-d6iwle\\CheckSymbolExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35207.1 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_643bb.dir\\Debug\\\\" /scanDependencies "cmTC_643bb.dir\\Debug\\\\" /Fo"cmTC_643bb.dir\\Debug\\\\" /Fd"cmTC_643bb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-d6iwle\\CheckSymbolExists.cxx"
+          CheckSymbolExists.cxx
+        ClCompile:
+          Compiling...
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_643bb.dir\\Debug\\\\" /Fo"cmTC_643bb.dir\\Debug\\\\" /Fd"cmTC_643bb.dir\\Debug\\vc143.pdb" /sourceDependencies "cmTC_643bb.dir\\Debug\\.d.json" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-d6iwle\\CheckSymbolExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35207.1 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\Users\\teren\\AppData\\my_stuff\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_643bb.dir\\Debug\\\\" /Fo"cmTC_643bb.dir\\Debug\\\\" /Fd"cmTC_643bb.dir\\Debug\\vc143.pdb" /sourceDependencies "cmTC_643bb.dir\\Debug\\.d.json" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-d6iwle\\CheckSymbolExists.cxx"
+          CheckSymbolExists.cxx
+          cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-d6iwle\\Debug\\cmTC_643bb.exe" /INCREMENTAL /ILK:"cmTC_643bb.dir\\Debug\\cmTC_643bb.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-d6iwle/Debug/cmTC_643bb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-d6iwle/Debug/cmTC_643bb.lib" /MACHINE:X64  /machine:x64 cmTC_643bb.dir\\Debug\\CheckSymbolExists.obj
+          cmTC_643bb.vcxproj -> C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-d6iwle\\Debug\\cmTC_643bb.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_643bb.dir\\Debug\\cmTC_643bb.tlog\\unsuccessfulbuild".
+          Touching "cmTC_643bb.dir\\Debug\\cmTC_643bb.tlog\\cmTC_643bb.lastbuildstate".
+        Done Building Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-d6iwle\\cmTC_643bb.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.75
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/FindThreads.cmake:99 (check_cxx_source_compiles)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/absl/abslConfig.cmake:4 (find_dependency)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/protobuf/protobuf-config.cmake:7 (find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/protobuf/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:850 (include)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/opencv4/OpenCVModules.cmake:19 (find_dependency)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/opencv4/OpenCVConfig.cmake:126 (include)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-n80nki"
+      binary: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-n80nki"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/Users/teren/AppData/my_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/teren/AppData/my_stuff/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-n80nki'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_930cb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.8+a7a4d5af0 for .NET Framework
+        Build started 7/9/2025 8:07:40 AM.
+        
+        Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\cmTC_930cb.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_930cb.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\Debug\\".
+          Creating directory "cmTC_930cb.dir\\Debug\\cmTC_930cb.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_930cb.dir\\Debug\\cmTC_930cb.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_930cb.dir\\Debug\\cmTC_930cb.tlog\\unsuccessfulbuild".
+        SetModuleDependencies:
+          Creating directory "cmTC_930cb.dir\\Debug\\cmTC_930cb_MD.tlog\\".
+          Scanning sources for module dependencies...
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_930cb.dir\\Debug\\\\" /scanDependencies "cmTC_930cb.dir\\Debug\\\\" /Fo"cmTC_930cb.dir\\Debug\\\\" /Fd"cmTC_930cb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\src.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35207.1 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_930cb.dir\\Debug\\\\" /scanDependencies "cmTC_930cb.dir\\Debug\\\\" /Fo"cmTC_930cb.dir\\Debug\\\\" /Fd"cmTC_930cb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\src.cxx"
+          src.cxx
+        C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\src.cxx(1,10): fatal  error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\cmTC_930cb.vcxproj]
+        C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\cmTC_930cb.vcxproj]
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(532,5): warning MSB8074: Cannot read Module Dependencies file cmTC_930cb.dir\\Debug\\src.cxx.module.json: Expecting element 'root' from namespace ''.. Encountered 'None'  with name '', namespace ''.  The build order might be incorrect. [C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\cmTC_930cb.vcxproj]
+        ClCompile:
+          Compiling...
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_930cb.dir\\Debug\\\\" /Fo"cmTC_930cb.dir\\Debug\\\\" /Fd"cmTC_930cb.dir\\Debug\\vc143.pdb" /sourceDependencies "cmTC_930cb.dir\\Debug\\.d.json" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\src.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35207.1 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_930cb.dir\\Debug\\\\" /Fo"cmTC_930cb.dir\\Debug\\\\" /Fd"cmTC_930cb.dir\\Debug\\vc143.pdb" /sourceDependencies "cmTC_930cb.dir\\Debug\\.d.json" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\src.cxx"
+          src.cxx
+        C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\cmTC_930cb.vcxproj]
+        Done Building Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\cmTC_930cb.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\cmTC_930cb.vcxproj" (default target) (1) ->
+        (SetModuleDependencies target) -> 
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(532,5): warning MSB8074: Cannot read Module Dependencies file cmTC_930cb.dir\\Debug\\src.cxx.module.json: Expecting element 'root' from namespace ''.. Encountered 'None'  with name '', namespace ''.  The build order might be incorrect. [C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\cmTC_930cb.vcxproj]
+        
+        
+        "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\cmTC_930cb.vcxproj" (default target) (1) ->
+        (SetModuleDependencies target) -> 
+          C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\src.cxx(1,10): fatal  error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\cmTC_930cb.vcxproj]
+          C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\cmTC_930cb.vcxproj]
+        
+        
+        "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\cmTC_930cb.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-n80nki\\cmTC_930cb.vcxproj]
+        
+            1 Warning(s)
+            3 Error(s)
+        
+        Time Elapsed 00:00:00.58
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CheckLibraryExists.cmake:112 (try_compile)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/absl/abslConfig.cmake:4 (find_dependency)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/protobuf/protobuf-config.cmake:7 (find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/protobuf/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:850 (include)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/opencv4/OpenCVModules.cmake:19 (find_dependency)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/opencv4/OpenCVConfig.cmake:126 (include)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-4b80eb"
+      binary: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-4b80eb"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/Users/teren/AppData/my_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/teren/AppData/my_stuff/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-4b80eb'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_05777.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.8+a7a4d5af0 for .NET Framework
+        Build started 7/9/2025 8:07:41 AM.
+        
+        Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4b80eb\\cmTC_05777.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_05777.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4b80eb\\Debug\\".
+          Creating directory "cmTC_05777.dir\\Debug\\cmTC_05777.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_05777.dir\\Debug\\cmTC_05777.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_05777.dir\\Debug\\cmTC_05777.tlog\\unsuccessfulbuild".
+        SetModuleDependencies:
+          Creating directory "cmTC_05777.dir\\Debug\\cmTC_05777_MD.tlog\\".
+          Scanning sources for module dependencies...
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_05777.dir\\Debug\\\\" /scanDependencies "cmTC_05777.dir\\Debug\\\\" /Fo"cmTC_05777.dir\\Debug\\\\" /Fd"cmTC_05777.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4b80eb\\CheckFunctionExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35207.1 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_05777.dir\\Debug\\\\" /scanDependencies "cmTC_05777.dir\\Debug\\\\" /Fo"cmTC_05777.dir\\Debug\\\\" /Fd"cmTC_05777.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4b80eb\\CheckFunctionExists.cxx"
+          CheckFunctionExists.cxx
+        ClCompile:
+          Compiling...
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_05777.dir\\Debug\\\\" /Fo"cmTC_05777.dir\\Debug\\\\" /Fd"cmTC_05777.dir\\Debug\\vc143.pdb" /sourceDependencies "cmTC_05777.dir\\Debug\\.d.json" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4b80eb\\CheckFunctionExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35207.1 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_05777.dir\\Debug\\\\" /Fo"cmTC_05777.dir\\Debug\\\\" /Fd"cmTC_05777.dir\\Debug\\vc143.pdb" /sourceDependencies "cmTC_05777.dir\\Debug\\.d.json" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4b80eb\\CheckFunctionExists.cxx"
+          CheckFunctionExists.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4b80eb\\Debug\\cmTC_05777.exe" /INCREMENTAL /ILK:"cmTC_05777.dir\\Debug\\cmTC_05777.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-4b80eb/Debug/cmTC_05777.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-4b80eb/Debug/cmTC_05777.lib" /MACHINE:X64  /machine:x64 cmTC_05777.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4b80eb\\cmTC_05777.vcxproj]
+        Done Building Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4b80eb\\cmTC_05777.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4b80eb\\cmTC_05777.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-4b80eb\\cmTC_05777.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.65
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CheckLibraryExists.cmake:112 (try_compile)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/absl/abslConfig.cmake:4 (find_dependency)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/protobuf/protobuf-config.cmake:7 (find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/protobuf/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:850 (include)"
+      - "C:/Users/teren/docs_and_files/Github_Repos/others/cmake/cmake-4.0.3-windows-x86_64/cmake-4.0.3-windows-x86_64/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/opencv4/OpenCVModules.cmake:19 (find_dependency)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/installed/x64-windows/share/opencv4/OpenCVConfig.cmake:126 (include)"
+      - "C:/Users/teren/AppData/my_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-lx49zy"
+      binary: "C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-lx49zy"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/Users/teren/AppData/my_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/teren/AppData/my_stuff/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-lx49zy'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_70681.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.8+a7a4d5af0 for .NET Framework
+        Build started 7/9/2025 8:07:41 AM.
+        
+        Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-lx49zy\\cmTC_70681.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_70681.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-lx49zy\\Debug\\".
+          Creating directory "cmTC_70681.dir\\Debug\\cmTC_70681.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_70681.dir\\Debug\\cmTC_70681.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_70681.dir\\Debug\\cmTC_70681.tlog\\unsuccessfulbuild".
+        SetModuleDependencies:
+          Creating directory "cmTC_70681.dir\\Debug\\cmTC_70681_MD.tlog\\".
+          Scanning sources for module dependencies...
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_70681.dir\\Debug\\\\" /scanDependencies "cmTC_70681.dir\\Debug\\\\" /Fo"cmTC_70681.dir\\Debug\\\\" /Fd"cmTC_70681.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-lx49zy\\CheckFunctionExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35207.1 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_70681.dir\\Debug\\\\" /scanDependencies "cmTC_70681.dir\\Debug\\\\" /Fo"cmTC_70681.dir\\Debug\\\\" /Fd"cmTC_70681.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-lx49zy\\CheckFunctionExists.cxx"
+          CheckFunctionExists.cxx
+        ClCompile:
+          Compiling...
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_70681.dir\\Debug\\\\" /Fo"cmTC_70681.dir\\Debug\\\\" /Fd"cmTC_70681.dir\\Debug\\vc143.pdb" /sourceDependencies "cmTC_70681.dir\\Debug\\.d.json" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-lx49zy\\CheckFunctionExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35207.1 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /ifcOutput "cmTC_70681.dir\\Debug\\\\" /Fo"cmTC_70681.dir\\Debug\\\\" /Fd"cmTC_70681.dir\\Debug\\vc143.pdb" /sourceDependencies "cmTC_70681.dir\\Debug\\.d.json" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-lx49zy\\CheckFunctionExists.cxx"
+          CheckFunctionExists.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-lx49zy\\Debug\\cmTC_70681.exe" /INCREMENTAL /ILK:"cmTC_70681.dir\\Debug\\cmTC_70681.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-lx49zy/Debug/cmTC_70681.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/CMakeFiles/CMakeScratch/TryCompile-lx49zy/Debug/cmTC_70681.lib" /MACHINE:X64  /machine:x64 cmTC_70681.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-lx49zy\\cmTC_70681.vcxproj]
+        Done Building Project "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-lx49zy\\cmTC_70681.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-lx49zy\\cmTC_70681.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\teren\\docs_and_files\\Github_Repos\\C++\\other-stuff\\mandelbrotgpu-yay\\CMakeFiles\\CMakeScratch\\TryCompile-lx49zy\\cmTC_70681.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.62
+        
+      exitCode: 1
+...

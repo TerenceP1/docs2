@@ -1,6 +1,6 @@
-^C:\USERS\TEREN\DOCS AND FILES\GITHUB_REPOS\C++\OTHER-STUFF\MANDELBROTGPU-YAY\CMAKEFILES\3AC0E1068DC0CCABD1852870CAB1EF24\GENERATE.STAMP.RULE
+^C:\USERS\TEREN\DOCS_AND_FILES\GITHUB_REPOS\C++\OTHER-STUFF\MANDELBROTGPU-YAY\CMAKEFILES\45AAD89DBD973A852068B8F368EF17FE\GENERATE.STAMP.RULE
 setlocal
-C:\Users\teren\docs_and_files\Github_Repos\others\cmake\cmake-4.0.3-windows-x86_64\cmake-4.0.3-windows-x86_64\bin\cmake.exe "-SC:/Users/teren/Docs and Files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay" "-BC:/Users/teren/Docs and Files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/teren/Docs and Files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/OpenCL_FP64_Test.sln"
+C:\Users\teren\docs_and_files\Github_Repos\others\cmake\cmake-4.0.3-windows-x86_64\cmake-4.0.3-windows-x86_64\bin\cmake.exe -SC:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay -BC:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/teren/docs_and_files/Github_Repos/C++/other-stuff/mandelbrotgpu-yay/OpenCL_FP64_Test.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
