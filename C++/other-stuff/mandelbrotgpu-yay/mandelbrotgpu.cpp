@@ -322,7 +322,7 @@ int main()
         writer.write(img); // Write the frame to the video file
     }
     writer.release();
-    system("start cmd /k echo DONE GENERATING MANDELBROT SET");
+    // system("start cmd /k echo DONE GENERATING MANDELBROT SET");
 
     // Cleanup OpenCL resources
     if (kernel)
